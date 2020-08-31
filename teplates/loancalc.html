@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} home {% endblock title %}
+{% block body %}
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src=" {% static 'images/loan.jpg' %} " alt="IMG">
+			</div>
+
+			<form class="contact1-form validate-form" action="/answer">
+				<span class="contact1-form-title">
+					Wanna know u get loan or not in some simple steps
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "required">
+					<input class="input1" type="text" name="income" placeholder="Applicant income in $/anum">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate = "required">
+					<input class="input1" type="text" name="cincome" placeholder="Coapplicant Income in $/anum">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate = "required">
+					<input class="input1" type="text" name="loanamount" placeholder="Loan Amount">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate = "required">
+					<input class="input1" type="text" name="term" placeholder="Loan Amount Term">
+					<span class="shadow-input1"></span>
+				</div>
+				<div class="wrap-input1 validate-input" data-validate = "required">
+					  <label for="CH">Credit History:</label>
+  					<select id="CH" name="CH">
+    					<option value="1">Yes</option>
+    					<option value="0">No</option>
+  					</select>
+				</div>
+				
+				<div class="wrap-input1 validate-input" data-validate = "required">
+					  <label for="area">Property Area:</label>
+  					<select id="area" name="area">
+    					<option value="0">Rural</option>
+    					<option value="1">urban</option>
+						<option value="2">semi-urban</option>
+  					</select>
+				</div>				
+								<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Send Email
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock body %}
+

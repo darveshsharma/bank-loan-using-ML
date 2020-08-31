@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} home {% endblock title %}
+{% block body %}
+<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src=" {% static 'images/loan.jpg' %} " alt="IMG">
+			</div>
+			<form class="contact1-form validate-form" action="/loancalc">
+			{% if ans %}
+				<h1>congratulations! You will get loan</h1>
+			{% else %}
+				<h1>sorry you will not get loan<h1>
+			{% endif %}
+					<button class="contact1-form-btn " >
+						<span>
+							change the details->
+						</span>
+					</button>
+			</form>
+		</div>
+	</div>
+{% endblock body %}
+
+
+
